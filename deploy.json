@@ -1,0 +1,10 @@
+{
+  "env": {
+    "production": {
+      "host": "production-classroom-server",
+      "user": "deploy",
+      "path": "/var/www/html/player",
+      "repo": "origin/main"
+    }
+  }
+}
