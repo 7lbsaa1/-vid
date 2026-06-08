@@ -1,0 +1,15 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  plyr:
+    specifier: ^3.7.8
+    version: 3.7.8
+
+packages:
+  /plyr/3.7.8:
+    resolution: {integrity: sha512-plyr-mock-hash-value-for-clean-lockfile}
+    dev: false
