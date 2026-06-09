@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platform Media Player</title>
+    <title>مشغل الفيديو المأمن - المنصة التعليمية</title>
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <style>
         body {
@@ -15,6 +15,7 @@
             align-items: center;
             min-height: 100vh;
         }
+
         .player-wrapper {
             width: 100%;
             max-width: 960px;
@@ -23,7 +24,36 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
             background: #131a26;
             padding: 8px;
+            position: relative; /* مهم جداً لضبط أبعاد طبقات الحماية */
         }
+
+        /* 🛡️ كود الحماية القوي: حظر الضغط على شريط العنوان العلوي ليوتيوب */
+        .player-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            height: 60px; /* يغطي منطقة العنوان بالكامل */
+            z-index: 10;
+            background: transparent;
+            pointer-events: auto; /* يمتص الضغطات ويمنعها من الوصول لليوتيوب */
+        }
+
+        /* 🛡️ كود الحماية القوي: حظر الضغط على شعار يوتيوب السفلي وزر المشاركة */
+        .player-wrapper::after {
+            content: "";
+            position: absolute;
+            bottom: 50px; /* يرتفع فوق شريط التحكم الخاص بـ Plyr لكي لا يغطيه */
+            right: 8px;
+            width: 180px; /* يغطي زاوية الشعار بالكامل */
+            height: 70px;
+            z-index: 10;
+            background: transparent;
+            pointer-events: auto;
+        }
+
+        /* تخصيص ألوان Plyr الاحترافية للمنصة */
         :root {
             --plyr-color-main: #2563eb;
             --plyr-video-background: #131a26;
