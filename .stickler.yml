@@ -1,0 +1,5 @@
+linters:
+  eslint:
+    javascript: "es6"
+  stylelint:
+    config: ".stylelintrc.json"
