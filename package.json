@@ -1,27 +1,6 @@
-{
-  "name": "plyr-classroom-player",
-  "version": "3.7.8",
-  "description": "Customized secure educational video player integration based on Plyr",
-  "main": "dist/plyr.js",
-  "style": "dist/plyr.css",
-  "scripts": {
+"scripts": {
     "build": "node build.js",
-    "deploy": "node deploy.js",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d build",
     "dev": "node build.js && npx static-server build"
   },
-  "dependencies": {
-    "plyr": "^3.7.8"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.17",
-    "esbuild": "^0.20.1",
-    "postcss": "^8.4.35",
-    "postcss-cli": "^11.0.0",
-    "sass": "^1.71.1",
-    "static-server": "^2.2.1"
-  },
-  "engines": {
-    "node": ">=20.11.0"
-  },
-  "license": "MIT"
-}
