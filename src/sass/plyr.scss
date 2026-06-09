@@ -1,0 +1,23 @@
+@import "../../../node_modules/plyr/src/sass/plyr.scss";
+
+$plyr-color-main: #2563eb;
+$plyr-video-background: #131a26;
+$plyr-menu-background: #1e293b;
+$plyr-menu-color: #f8fafc;
+
+.plyr {
+    border-radius: 12px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    
+    &--full-ui {
+        --plyr-color-main: #{$plyr-color-main};
+    }
+    
+    .plyr__control {
+        transition: background 0.2s ease, transform 0.1s ease;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
