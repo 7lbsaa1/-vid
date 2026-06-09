@@ -1,0 +1,13 @@
+src/
+tasks/
+.circleci/
+.github/
+.editorconfig
+.gitpod.yml
+.prettierrc
+.stickler.yml
+.stylelintrc.json
+plyr.code-workspace
+CHANGELOG.md
+CONTRIBUTING.md
+CONTROLS.md
